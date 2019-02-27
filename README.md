@@ -1,12 +1,12 @@
 # spa-webpack-demo
 
 ```
-git clone https://github.com/jkcaptain/spa-webpack-demo.git
+git clone https://github.com/qjwvtd/vue-spa-demo.git
 
-cd spa-webpack-demo
+cd vue-spa-demo
 
 npm install
 
-npm run dev
+npm start
 
 ```
