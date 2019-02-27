@@ -1,0 +1,12 @@
+.idea
+.idea/
+/.idea/
+.vscode
+.vscode/
+/.vscode/
+node_modules
+node_modules/
+/node_modules/
+.DS_Store
+.DS_Store/
+/.DS_Store/
