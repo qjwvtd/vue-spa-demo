@@ -7,7 +7,7 @@ const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
 
 function resolve(dir) {
-    return path.join(__dirname, './', dir)
+    return path.join(__dirname, './', dir);
 }
 
 module.exports = {
@@ -59,6 +59,5 @@ module.exports = {
             filename: 'index.html',
             template: 'index.html'
         })
-        // new DashboardPlugin()
     ]
 }

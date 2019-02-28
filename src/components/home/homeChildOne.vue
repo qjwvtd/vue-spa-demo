@@ -1,12 +1,26 @@
 <template>
     <div class="homeOne">
-        this is home one
+        <button type="button" @click="setContext">click me</button>
+        <p>his is home one</p>
+        <p>click count {{count}}</p>
     </div>
 </template>
 
 <script>
+import {store} from './../../store/store';
 export default {
-    name: 'homeOne'
+    name: 'homeOne',
+    data(){
+        return {
+            count:store.state.count
+        }
+    },
+    methods:{
+        setContext(){
+            store.commit('increment');
+            this.count = store.state.count;
+        }
+    }
 }
 </script>
 
@@ -14,6 +28,15 @@ export default {
     .homeOne {
         width: 100%;
         height: 300px;
+        text-align: center;
+        background: #cccccc;
+    }
+    .homeOne button{
+        margin: 30px 0 0 0;
+        padding: 5px 15px;
+    }
+    .homeOne p{
+        line-height: 60px;
     }
 </style>
 

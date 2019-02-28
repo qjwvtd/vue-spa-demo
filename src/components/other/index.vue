@@ -1,12 +1,18 @@
 <template>
     <div class="other">
-        this is other page
+        this is other page {{count}}
     </div>
 </template>
 
 <script>
+import {store} from './../../store/store';
 export default {
-    name: 'other'
+    name: 'other',
+    data(){
+        return {
+            count:store.state.count
+        };
+    }
 }
 </script>
 
