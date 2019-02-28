@@ -13,7 +13,7 @@ Vue.use(VueRouter);//注册router
 const router = new VueRouter({
   routes:[
     {
-        path:'/home',
+        path:'/',
         component:home,
         children:[
             {
