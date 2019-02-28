@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from './App';
-import home from "./components/home/index";
-import about from "./components/about/index";
-import other from "./components/other/index";
-import homeOne from './components/home/homeChildOne';
-import homeTwo from './components/home/homeChildTwo';
+import App from '@/App.vue';
+import home from "@/components/home/index";
+import about from "@/components/about/index";
+import other from "@/components/other/index";
+import homeOne from '@/components/home/homeChildOne';
+import homeTwo from '@/components/home/homeChildTwo';
 
 
 Vue.use(VueRouter);//注册router

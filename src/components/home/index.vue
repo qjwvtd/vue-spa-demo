@@ -1,13 +1,9 @@
 <template>
     <div class="home">
-        <ul class="homeNav">
-            <li>
-                <router-link to="child1">child1</router-link>
-            </li>
-            <li>
-                <router-link to="child2">child2</router-link>
-            </li>
-        </ul>
+        <div class="homeNav">
+            <router-link to="child1">child1</router-link>
+            <router-link to="child2">child2</router-link>
+        </div>
         <router-view></router-view>
     </div>
 </template>
@@ -26,9 +22,8 @@ export default {
     }
     .home .homeNav{
         overflow: hidden;
-        list-style: none;
     }
-    .home .homeNav li{
+    .home .homeNav a{
         float: left;
         width: 120px;
         line-height: 40px;
