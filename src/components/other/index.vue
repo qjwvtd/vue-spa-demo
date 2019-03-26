@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import {store} from './../../store/store';
+import {index} from '../../store';
 export default {
     name: 'Other',
     data(){
         return {
-            count:store.state.count
+            count:index.state.count
         };
     }
 }

@@ -14,6 +14,7 @@ export default {
     .homeTwo {
         width: 100%;
         height: 300px;
+        line-height: 300px;
         text-align: center;
         background: #46493d;
     }

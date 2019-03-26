@@ -7,18 +7,18 @@
 </template>
 
 <script>
-import {store} from './../../store/store';
+import {index} from '@/store';
 export default {
     name: 'HomeOne',
     data(){
         return {
-            count:store.state.count
+            count:index.state.count
         }
     },
     methods:{
         setContext(){
-            store.commit('increment');
-            this.count = store.state.count;
+            index.commit('increment');
+            this.count = index.state.count;
         }
     }
 }
@@ -28,6 +28,7 @@ export default {
     .homeOne {
         width: 100%;
         height: 300px;
+        line-height: 100px;
         text-align: center;
         background: #cccccc;
     }

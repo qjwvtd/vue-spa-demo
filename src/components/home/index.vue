@@ -1,8 +1,8 @@
 <template>
     <div class="home">
         <div class="homeNav">
-            <router-link to="child1">child1</router-link>
-            <router-link to="child2">child2</router-link>
+            <router-link to="child1">homeModuleOne</router-link>
+            <router-link to="child2">homeModuleTwo</router-link>
         </div>
         <router-view></router-view>
     </div>
