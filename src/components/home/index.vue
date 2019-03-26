@@ -1,8 +1,8 @@
 <template>
     <div class="home">
         <div class="homeNav">
-            <router-link to="child1">homeModuleOne</router-link>
-            <router-link to="child2">homeModuleTwo</router-link>
+            <router-link to="homeOne" exact>homeModuleOne</router-link>
+            <router-link to="homeTwo">homeModuleTwo</router-link>
         </div>
         <router-view></router-view>
     </div>
@@ -25,7 +25,7 @@ export default {
     }
     .home .homeNav a{
         float: left;
-        width: 120px;
+        width: 50%;
         line-height: 40px;
         text-align: center;
     }
