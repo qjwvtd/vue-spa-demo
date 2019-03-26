@@ -47,7 +47,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: resolve('dist'), // dist 根目录
+        contentBase: path.join(__dirname, './', 'dist'), // dist 根目录
         hot: true,   // 是否开启热替换，无须手动刷新浏览器
         port: 8888,    // 端口
         open: false,    // 是否自动打开浏览器

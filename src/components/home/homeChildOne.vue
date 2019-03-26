@@ -1,7 +1,7 @@
 <template>
     <div class="homeOne">
         <button type="button" @click="setContext">click me</button>
-        <p>his is home one</p>
+        <p>this is home one</p>
         <p>click count {{count}}</p>
     </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 import {store} from './../../store/store';
 export default {
-    name: 'homeOne',
+    name: 'HomeOne',
     data(){
         return {
             count:store.state.count

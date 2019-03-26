@@ -1,36 +1,37 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from '@/App.vue';
-import home from "@/components/home/index";
-import about from "@/components/about/index";
-import other from "@/components/other/index";
-import homeOne from '@/components/home/homeChildOne';
-import homeTwo from '@/components/home/homeChildTwo';
+import Home from "@/components/home/index";
+import About from "@/components/about/index";
+import Other from "@/components/other/index";
+import HomeOne from '@/components/home/homeChildOne';
+import HomeTwo from '@/components/home/homeChildTwo';
 
 
 Vue.use(VueRouter);//注册router
 
+//router全局配置
 const router = new VueRouter({
   routes:[
     {
         path:'/',
-        component:home,
+        component:Home,
         children:[
             {
                 path:'/child1',
-                component:homeOne
+                component:HomeOne
             },
             {
               path:'/child2',
-              component:homeTwo
+              component:HomeTwo
           }
         ]
     },
-    {path:'/about',component:about},
-    {path:'/other',component:other}
+    {path:'/about',component:About},
+    {path:'/other',component:Other}
   ]
 });
-
+//挂载
 new Vue({
     el: '#app',
     router,

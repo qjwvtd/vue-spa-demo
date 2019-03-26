@@ -7,7 +7,7 @@
 <script>
 import {store} from './../../store/store';
 export default {
-    name: 'other',
+    name: 'Other',
     data(){
         return {
             count:store.state.count
