@@ -1,16 +1,22 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex from 'Vuex';
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
-export const index = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment() {
-      this.state.count = this.state.count + 1;
-      console.log(this.state.count);
-    }
-  }
-});
+const store = () => new Vuex.Store({
+	state: {
+		num: 0
+	},
+	mutations: {
+		change (state,data) {
+			state.num += data;
+		}
+	},
+	actions: {
+		changeAction({commit},data){
+			commit('change',data);
+		}
+	}
+})
+
+export default store

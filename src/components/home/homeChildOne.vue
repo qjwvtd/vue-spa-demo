@@ -1,25 +1,15 @@
 <template>
     <div class="homeOne">
-        <button type="button" @click="setContext">click me</button>
         <p>this is home one</p>
-        <p>click count {{count}}</p>
+        <p>click count {{$store.state.num}}</p>
     </div>
 </template>
 
 <script>
-import {index} from '@/store';
 export default {
     name: 'HomeOne',
     data(){
-        return {
-            count:index.state.count
-        }
-    },
-    methods:{
-        setContext(){
-            index.commit('increment');
-            this.count = index.state.count;
-        }
+        return {}
     }
 }
 </script>
