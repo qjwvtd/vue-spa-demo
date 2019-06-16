@@ -21,7 +21,8 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                exclude: /node_modules/
             },
             {
                 test: /\.js$/,
@@ -29,12 +30,14 @@ module.exports = {
                 include: [
                     resolve('src'),
                     resolve('node_modules/webpack-dev-server/client')
-                ]
+                ],
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            },
+                use: ['style-loader', 'css-loader'],
+                exclude: /node_modules/
+			},
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
@@ -42,7 +45,8 @@ module.exports = {
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]'
-                }
+                },
+                exclude: /node_modules/
             }
         ]
     },
