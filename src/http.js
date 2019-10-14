@@ -1,15 +1,26 @@
 import axios from 'axios'
-axios.interceptors.request.use()
 
-axios.interceptors.response.use()
+const author = 'Authorization'
+
+axios.interceptors.request.use(
+  config => {
+    const token = '一个假的token字符串,用的时候要换成真实token字符串'
+    if (token) {
+      config.headers.common[author] = 'Bearer' + token
+    }
+    return config
+  }, error => Promise.reject(error)
+)
+
+axios.interceptors.response.use(response => response, error => Promise.resolve(error.response))
 
 function checkStatus(response) {
-  //做一些判断
+  //有响应时做一些检查
   return response
 }
 
 function checkCode(res, errMsg) {
-  //做一些判断
+  //错误时做一些检查
   return res.data
 }
 
